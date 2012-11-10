@@ -21,7 +21,7 @@ public abstract class DemoUtils {
 		final String mUrl = "http://imgur.com/gallery/hot.json";
 		URL url = new URL(mUrl);
 		JSONObject object = new JSONObject(convertStreamToString(url.openStream()));
-		JSONArray locations = object.getJSONArray("gallery");
+		JSONArray locations = object.getJSONArray("data");
 		
 		ArrayList<Pair<String, String>> objects = new ArrayList<Pair<String, String>>();
     	for(int i=0; i < locations.length(); i++){
